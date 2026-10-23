@@ -1,0 +1,58 @@
+{
+  "balancing": false,
+  "explainer_fit": false,
+  "generated_at_utc": "2026-09-28T18:54:44.419867+00:00",
+  "limitations": [
+    "sampled 20 test instances only",
+    "vendored LIME-compatible implementation from Phase 3B",
+    "perturbations are model-input interventions, not causal claims"
+  ],
+  "methods": [
+    "lime_compatible",
+    "shap_kernel"
+  ],
+  "model_fit": false,
+  "phase": "3C",
+  "phase3a_source_dir": "results/experiments/phase3a_rerun",
+  "phase3b_source_dir": "results/experiments/phase3b_rerun",
+  "preprocessing_fit": false,
+  "protected_hashes_after": {
+    "audit": "b041ba5a2127f6011bdf167f800eeca28186748b280d1e373d0ef2ee120a7ee9",
+    "audit_md": "b252498da507055ca7bdd6369f9fd71e21abc8103e5b53430ba1603fa4f95e88",
+    "baseline_config": "07e7d3a6187a0781bb831f4baeb22802dacd926c0dbd1f0ea1608479bc956285",
+    "feature_names": "fd3a6122b16f7e7ebd247e58e32ffb10b0f604242ec0aa20d9b30ab5b852330c",
+    "lime": "7e8f103267f58bb67613ab94a21cb462b4b1db1fe5c36ee3453aa9fa03c38b3b",
+    "manifest": "765289887ac57f0a7f08b0d2761c9507e65f8ff98805ab69dc08a6cc312bf4f1",
+    "model": "4d6d1b39f986634dc233e7146103dbcaec5941066daae244263034d1264c734d",
+    "p3b_metadata": "c95c7390f553e852e741bdc8ab88050bf2e01e0534af350a1d28432ff417a726",
+    "selected_instances": "7d51e098889d7c489a4b0629d2e173ca84cdda44467a5841acce0b65523699fd",
+    "selector": "b60031d3dfba07e258553bbb785fae335e1eaeca4e79e03a1778ff478315cff6",
+    "shap": "ee3c736ba45b57ef93c46c174cb8c353253eca38b97b2df7b591aa00a569e583",
+    "test_predictions": "3248ba72ba97097600c6e007339af8ee2bffeeb26a67bf1bccb6fde6dcd2803e",
+    "vectorizer": "23269a74412c250009b318342dc9ef430bbe1a5d9ccb7490f9efd9d0c9385fb1"
+  },
+  "protected_hashes_before": {
+    "audit": "b041ba5a2127f6011bdf167f800eeca28186748b280d1e373d0ef2ee120a7ee9",
+    "audit_md": "b252498da507055ca7bdd6369f9fd71e21abc8103e5b53430ba1603fa4f95e88",
+    "baseline_config": "07e7d3a6187a0781bb831f4baeb22802dacd926c0dbd1f0ea1608479bc956285",
+    "feature_names": "fd3a6122b16f7e7ebd247e58e32ffb10b0f604242ec0aa20d9b30ab5b852330c",
+    "lime": "7e8f103267f58bb67613ab94a21cb462b4b1db1fe5c36ee3453aa9fa03c38b3b",
+    "manifest": "765289887ac57f0a7f08b0d2761c9507e65f8ff98805ab69dc08a6cc312bf4f1",
+    "model": "4d6d1b39f986634dc233e7146103dbcaec5941066daae244263034d1264c734d",
+    "p3b_metadata": "c95c7390f553e852e741bdc8ab88050bf2e01e0534af350a1d28432ff417a726",
+    "selected_instances": "7d51e098889d7c489a4b0629d2e173ca84cdda44467a5841acce0b65523699fd",
+    "selector": "b60031d3dfba07e258553bbb785fae335e1eaeca4e79e03a1778ff478315cff6",
+    "shap": "ee3c736ba45b57ef93c46c174cb8c353253eca38b97b2df7b591aa00a569e583",
+    "test_predictions": "3248ba72ba97097600c6e007339af8ee2bffeeb26a67bf1bccb6fde6dcd2803e",
+    "vectorizer": "23269a74412c250009b318342dc9ef430bbe1a5d9ccb7490f9efd9d0c9385fb1"
+  },
+  "raw_data_modified": false,
+  "seed": 42,
+  "software": {
+    "joblib": "1.4.2",
+    "matplotlib": "3.8.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "python": "3.11.9"
+  }
+}
