@@ -1,0 +1,5 @@
+group,total_windows,present_ge3,ess_pass,lime_screened,complete_lime_scan,feature_eligible_pool_ge3,r2_eligible_pool_ge4,removed_by_global_cap,target,final_selected,selected_traces,selected_independent_clusters,r2_eligible_traces,r2_eligible_clusters
+FP,354,252,60,16,False,15,10,,10,10,10,10,10,10
+FN,580,554,49,40,False,27,10,,10,10,10,10,10,10
+TP,1144,1144,12,10,False,10,10,,10,10,10,10,10,10
+TN,11461,8771,21,17,False,15,10,,10,10,10,10,10,10

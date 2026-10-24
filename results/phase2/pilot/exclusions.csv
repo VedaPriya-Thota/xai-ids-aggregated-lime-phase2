@@ -1,0 +1,16 @@
+method,group,windows,guided_infeasible_pool_lt3,R2_uninformative_pool_eq3,informative_R2_pool_ge4,pct_R2_uninformative_or_infeasible
+single,TP,10,0,0,10,0.0
+single,FN,10,0,1,9,10.0
+single,TN,10,0,1,9,10.0
+single,FP,10,0,0,10,0.0
+single,ALL,40,0,2,38,5.0
+agg,TP,10,0,0,10,0.0
+agg,FN,10,0,0,10,0.0
+agg,TN,10,0,0,10,0.0
+agg,FP,10,0,0,10,0.0
+agg,ALL,40,0,0,40,0.0
+cm,TP,10,0,0,10,0.0
+cm,FN,10,0,1,9,10.0
+cm,TN,10,0,0,10,0.0
+cm,FP,10,0,2,8,20.0
+cm,ALL,40,0,3,37,7.5

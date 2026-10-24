@@ -1,0 +1,8 @@
+Phase 2 seeds (all derived deterministically; nothing depends on call order or wall-clock)
+base_seed = 42
+LIME run seed      = uint32(sha256("42|<stream>|<window_id>|<run>")[:8]); streams: agg, single, repA, repB, cm
+Random-control seed = uint32(sha256("42|rand|<window_id>|<draw>")[:8]) -> default_rng(seed).permutation(150) (priority order shared by all methods)
+Sampling order key  = sha256("42|order|<window_id>")  (ascending)
+Bootstrap seed      = 20261023 (+ fixed offset per comparison, see src/phase2/run_phase2.py)
+window_id           = "<trace_id>#<start_index>"
+Phase 1 seed (unchanged, for reference): 42

@@ -1,0 +1,23 @@
+{
+ "windows": 40,
+ "per_group": {
+  "FP": 10,
+  "FN": 10,
+  "TP": 10,
+  "TN": 10
+ },
+ "bit_identical_rerun": [
+  true,
+  true
+ ],
+ "mean_lime_runtime_per_window_s": 8.654750300975092,
+ "sampling_seconds": 190.54257082939148,
+ "run_seconds": 319.22096371650696,
+ "projected_final_lime_seconds_160_windows": 1384.7600481560148,
+ "protected_files": {
+  "n_files_verified": 167,
+  "changed": [],
+  "missing": []
+ },
+ "python": "3.12.3"
+}

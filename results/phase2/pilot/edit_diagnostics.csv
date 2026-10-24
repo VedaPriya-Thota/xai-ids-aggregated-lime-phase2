@@ -1,0 +1,4 @@
+method,windows,edit_success_rate,mean_features_edited,mean_positions_edited,windows_with_failures
+agg,40,0.85,2.825,8.525,6
+cm,40,0.8,2.8,9.2,8
+single,40,0.85,2.85,9.0,6

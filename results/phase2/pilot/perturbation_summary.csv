@@ -1,0 +1,151 @@
+outcome,method,arm,quantity,group,estimate,ci_low,ci_high,p_boot,n_windows,n_clusters,n_boot,n_empty_group
+direction_aware_drop,single,guided,direction_aware_drop | single | guided,"ALL (macro, equal-weight groups)",3.506199647010294,2.7327486382448547,4.208099952828816,0.0009995002498750624,38,38,2000,0
+direction_aware_drop,single,guided,direction_aware_drop | single | guided,TP,5.116776923415994,3.790801517231969,6.280566274421,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,single,guided,direction_aware_drop | single | guided,FN,0.2676131501622582,-0.6770303217679398,1.0588454485276069,0.55872063968016,9,9,2000,0
+direction_aware_drop,single,guided,direction_aware_drop | single | guided,TN,4.067972592874732,2.041805691659058,6.155042331464292,0.0009995002498750624,9,9,2000,0
+direction_aware_drop,single,guided,direction_aware_drop | single | guided,FP,4.572435921588192,3.5211415460999054,5.432036507948425,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,single,R2 matched random (mean of draws),direction_aware_drop | single | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",3.1023871094563615,2.4606929616191286,3.7579279957675755,0.001,38,38,1999,1
+direction_aware_drop,single,R2 matched random (mean of draws),direction_aware_drop | single | R2 matched random (mean of draws),TP,4.402756811319252,3.040315752238895,5.6507124963444815,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,single,R2 matched random (mean of draws),direction_aware_drop | single | R2 matched random (mean of draws),FN,0.19410348052527715,-0.7231014386509731,0.9430696959435905,0.6186906546726637,9,9,2000,0
+direction_aware_drop,single,R2 matched random (mean of draws),direction_aware_drop | single | R2 matched random (mean of draws),TN,3.591605574060454,1.8777644759151195,5.182901077613614,0.0009995002498750624,9,9,2000,0
+direction_aware_drop,single,R2 matched random (mean of draws),direction_aware_drop | single | R2 matched random (mean of draws),FP,4.221082571920462,3.3011883496350674,4.8784403956085995,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,guided,direction_aware_drop | agg | guided,"ALL (macro, equal-weight groups)",3.5896501708668036,2.8260798982443642,4.275315522980195,0.0009995002498750624,40,40,2000,0
+direction_aware_drop,agg,guided,direction_aware_drop | agg | guided,TP,5.07365424777648,3.5042491741299067,6.39541324194386,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,guided,direction_aware_drop | agg | guided,FN,0.1481497484496701,-0.80906952454898,1.028992051532276,0.7096451774112944,10,10,2000,0
+direction_aware_drop,agg,guided,direction_aware_drop | agg | guided,TN,4.530159240967814,2.5976410565884893,6.3156112562701665,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,guided,direction_aware_drop | agg | guided,FP,4.60663744627325,3.6703569660243036,5.460755049986516,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,R2 matched random (mean of draws),direction_aware_drop | agg | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",3.024416379784646,2.4492445175638338,3.579160507984848,0.0009995002498750624,40,40,2000,0
+direction_aware_drop,agg,R2 matched random (mean of draws),direction_aware_drop | agg | R2 matched random (mean of draws),TP,4.285351270030728,3.0319775381453633,5.340222362683453,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,R2 matched random (mean of draws),direction_aware_drop | agg | R2 matched random (mean of draws),FN,0.11367931529169935,-0.8357801038570114,0.8720708114651662,0.7646176911544228,10,10,2000,0
+direction_aware_drop,agg,R2 matched random (mean of draws),direction_aware_drop | agg | R2 matched random (mean of draws),TN,3.5543184457376364,2.1326735186773274,5.041257094337695,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,agg,R2 matched random (mean of draws),direction_aware_drop | agg | R2 matched random (mean of draws),FP,4.144316488078521,3.2709631290409,4.843664097616765,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,cm,guided,direction_aware_drop | cm | guided,"ALL (macro, equal-weight groups)",3.5388473530564273,2.835045767776353,4.23542896623643,0.0009995002498750624,37,37,2000,0
+direction_aware_drop,cm,guided,direction_aware_drop | cm | guided,TP,5.2583735772450755,3.6721920569863085,6.662253121912509,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,cm,guided,direction_aware_drop | cm | guided,FN,-0.06702609343087923,-1.2807219032456028,0.9980400775694093,0.9305347326336831,9,9,2000,0
+direction_aware_drop,cm,guided,direction_aware_drop | cm | guided,TN,4.527906611419494,2.5689490646057935,6.313702350263105,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,cm,guided,direction_aware_drop | cm | guided,FP,4.436135316992019,3.4234190729699674,5.363747356503801,0.0009995002498750624,8,8,2000,0
+direction_aware_drop,cm,R2 matched random (mean of draws),direction_aware_drop | cm | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",3.1254177628871345,2.4641371420961242,3.7219922663885043,0.0009995002498750624,37,37,2000,0
+direction_aware_drop,cm,R2 matched random (mean of draws),direction_aware_drop | cm | R2 matched random (mean of draws),TP,4.366378482751764,3.1412170872721163,5.461676811210183,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,cm,R2 matched random (mean of draws),direction_aware_drop | cm | R2 matched random (mean of draws),FN,0.04510752959354772,-0.9688916357181161,0.9501760610961897,0.8895552223888056,9,9,2000,0
+direction_aware_drop,cm,R2 matched random (mean of draws),direction_aware_drop | cm | R2 matched random (mean of draws),TN,3.5543184457376364,2.0901957725378737,4.955455882126534,0.0009995002498750624,10,10,2000,0
+direction_aware_drop,cm,R2 matched random (mean of draws),direction_aware_drop | cm | R2 matched random (mean of draws),FP,4.53586659346559,3.3497980608200826,5.278535707377738,0.0009995002498750624,8,8,2000,0
+attack_logit_drop,single,guided,attack_logit_drop | single | guided,"ALL (macro, equal-weight groups)",1.338406775491799,0.6603046081772606,2.049690928680607,0.0009995002498750624,38,38,2000,0
+attack_logit_drop,single,guided,attack_logit_drop | single | guided,TP,5.116776923415994,3.799372602998747,6.26350008724137,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,single,guided,attack_logit_drop | single | guided,FN,-0.2676131501622582,-1.0346760719414192,0.6332870690428246,0.5547226386806596,9,9,2000,0
+attack_logit_drop,single,guided,attack_logit_drop | single | guided,TN,-4.067972592874732,-6.0833138359717704,-2.05259515134761,0.0009995002498750624,9,9,2000,0
+attack_logit_drop,single,guided,attack_logit_drop | single | guided,FP,4.572435921588192,3.49585497120561,5.463489037912627,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,single,R2 matched random (mean of draws),attack_logit_drop | single | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",1.2095325821634955,0.5673547854352929,1.8340321913640696,0.0009995002498750624,38,38,2000,0
+attack_logit_drop,single,R2 matched random (mean of draws),attack_logit_drop | single | R2 matched random (mean of draws),TP,4.402756811319252,3.0391214666171775,5.656672406831085,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,single,R2 matched random (mean of draws),attack_logit_drop | single | R2 matched random (mean of draws),FN,-0.19410348052527715,-0.9208904247825496,0.719720783964652,0.5847076461769115,9,9,2000,0
+attack_logit_drop,single,R2 matched random (mean of draws),attack_logit_drop | single | R2 matched random (mean of draws),TN,-3.591605574060454,-5.162716922437619,-1.8953058462718415,0.0009995002498750624,9,9,2000,0
+attack_logit_drop,single,R2 matched random (mean of draws),attack_logit_drop | single | R2 matched random (mean of draws),FP,4.221082571920462,3.3246571407902152,4.8921626533776745,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,guided,attack_logit_drop | agg | guided,"ALL (macro, equal-weight groups)",1.2504956761580612,0.49539132004705416,1.9277410984037786,0.001999000499750125,40,40,2000,0
+attack_logit_drop,agg,guided,attack_logit_drop | agg | guided,TP,5.07365424777648,3.58119879809599,6.377812741350284,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,guided,attack_logit_drop | agg | guided,FN,-0.1481497484496701,-1.0489446083879197,0.7928395408355118,0.750624687656172,10,10,2000,0
+attack_logit_drop,agg,guided,attack_logit_drop | agg | guided,TN,-4.530159240967814,-6.327968661363768,-2.5961653895747365,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,guided,attack_logit_drop | agg | guided,FP,4.60663744627325,3.653811795296276,5.374043864243209,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,R2 matched random (mean of draws),attack_logit_drop | agg | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",1.190417499269978,0.6171225557674975,1.7818040396179686,0.0009995002498750624,40,40,2000,0
+attack_logit_drop,agg,R2 matched random (mean of draws),attack_logit_drop | agg | R2 matched random (mean of draws),TP,4.285351270030728,3.0384728328139476,5.406546950079871,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,R2 matched random (mean of draws),attack_logit_drop | agg | R2 matched random (mean of draws),FN,-0.11367931529169935,-0.8860372045133813,0.7893981542062134,0.8135932033983009,10,10,2000,0
+attack_logit_drop,agg,R2 matched random (mean of draws),attack_logit_drop | agg | R2 matched random (mean of draws),TN,-3.5543184457376364,-4.983466830786391,-2.0885539731837848,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,agg,R2 matched random (mean of draws),attack_logit_drop | agg | R2 matched random (mean of draws),FP,4.144316488078521,3.246812124573645,4.805912464812011,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,cm,guided,attack_logit_drop | cm | guided,"ALL (macro, equal-weight groups)",1.3084070940621197,0.5860386543541225,2.0194347187021613,0.001,37,37,1999,1
+attack_logit_drop,cm,guided,attack_logit_drop | cm | guided,TP,5.2583735772450755,3.677732931790374,6.616977765950595,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,cm,guided,attack_logit_drop | cm | guided,FN,0.06702609343087923,-1.0150883331145626,1.2821568992833299,0.8825587206396801,9,9,2000,0
+attack_logit_drop,cm,guided,attack_logit_drop | cm | guided,TN,-4.527906611419494,-6.248405624111119,-2.5998221967462323,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,cm,guided,attack_logit_drop | cm | guided,FP,4.436135316992019,3.3815518283096577,5.339342256601876,0.0009995002498750624,8,8,2000,0
+attack_logit_drop,cm,R2 matched random (mean of draws),attack_logit_drop | cm | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",1.3257047752215425,0.7175967134387333,1.926244892370146,0.0009995002498750624,37,37,2000,0
+attack_logit_drop,cm,R2 matched random (mean of draws),attack_logit_drop | cm | R2 matched random (mean of draws),TP,4.366378482751764,3.119244538824382,5.4185539194326795,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,cm,R2 matched random (mean of draws),attack_logit_drop | cm | R2 matched random (mean of draws),FN,-0.04510752959354772,-0.9336872109211138,0.919671070203815,0.9145427286356822,9,9,2000,0
+attack_logit_drop,cm,R2 matched random (mean of draws),attack_logit_drop | cm | R2 matched random (mean of draws),TN,-3.5543184457376364,-5.016309964086559,-2.03870892869405,0.0009995002498750624,10,10,2000,0
+attack_logit_drop,cm,R2 matched random (mean of draws),attack_logit_drop | cm | R2 matched random (mean of draws),FP,4.53586659346559,3.3843300301803962,5.271630633508221,0.0009995002498750624,8,8,2000,0
+prob_change,single,guided,prob_change | single | guided,"ALL (macro, equal-weight groups)",-0.32034079437932295,-0.3772627181896068,-0.2607743542517264,0.0009995002498750624,38,38,2000,0
+prob_change,single,guided,prob_change | single | guided,TP,-0.7127401484692462,-0.8287245918133069,-0.5692069034875222,0.0009995002498750624,10,10,2000,0
+prob_change,single,guided,prob_change | single | guided,FN,0.012742630982245047,-0.12644468688386193,0.1271232905075571,0.8225887056471765,9,9,2000,0
+prob_change,single,guided,prob_change | single | guided,TN,0.04957394010687712,0.005008148259438464,0.1256613126521682,0.0009995002498750624,9,9,2000,0
+prob_change,single,guided,prob_change | single | guided,FP,-0.6309396001371677,-0.723339670040916,-0.5122644360749034,0.0009995002498750624,10,10,2000,0
+prob_change,single,R2 matched random (mean of draws),prob_change | single | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",-0.2934438253095419,-0.3452616434694551,-0.2370312428322125,0.0009995002498750624,38,38,2000,0
+prob_change,single,R2 matched random (mean of draws),prob_change | single | R2 matched random (mean of draws),TP,-0.6076389289512208,-0.7349838770871585,-0.4652569836495068,0.0009995002498750624,10,10,2000,0
+prob_change,single,R2 matched random (mean of draws),prob_change | single | R2 matched random (mean of draws),FN,-0.005489050111823771,-0.11828469142310846,0.0785254597324137,0.9815092453773113,9,9,2000,0
+prob_change,single,R2 matched random (mean of draws),prob_change | single | R2 matched random (mean of draws),TN,0.028021289063485624,0.008469576164235776,0.060561985456271804,0.0009995002498750624,9,9,2000,0
+prob_change,single,R2 matched random (mean of draws),prob_change | single | R2 matched random (mean of draws),FP,-0.5886686112386086,-0.6705220003347069,-0.475742746241758,0.0009995002498750624,10,10,2000,0
+prob_change,agg,guided,prob_change | agg | guided,"ALL (macro, equal-weight groups)",-0.31884232917977307,-0.3761648079109483,-0.2554678071432113,0.0009995002498750624,40,40,2000,0
+prob_change,agg,guided,prob_change | agg | guided,TP,-0.6717297778614043,-0.8310320607348451,-0.490305019270011,0.0009995002498750624,10,10,2000,0
+prob_change,agg,guided,prob_change | agg | guided,FN,-0.014642473492071035,-0.13974167345914948,0.1011881995057286,0.8405797101449275,10,10,2000,0
+prob_change,agg,guided,prob_change | agg | guided,TN,0.051056530372416364,0.01061080966925991,0.11320867294923928,0.0009995002498750624,10,10,2000,0
+prob_change,agg,guided,prob_change | agg | guided,FP,-0.6400535957380332,-0.7245392573785255,-0.5351477374400652,0.0009995002498750624,10,10,2000,0
+prob_change,agg,R2 matched random (mean of draws),prob_change | agg | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",-0.292999998894556,-0.3443187405193207,-0.24157869007861393,0.0009995002498750624,40,40,2000,0
+prob_change,agg,R2 matched random (mean of draws),prob_change | agg | R2 matched random (mean of draws),TP,-0.6074007256050459,-0.7297981308524082,-0.4761924648549056,0.0009995002498750624,10,10,2000,0
+prob_change,agg,R2 matched random (mean of draws),prob_change | agg | R2 matched random (mean of draws),FN,-0.01145698997548188,-0.13603637482178518,0.09516994050114089,0.8865567216391804,10,10,2000,0
+prob_change,agg,R2 matched random (mean of draws),prob_change | agg | R2 matched random (mean of draws),TN,0.0295862402562495,0.010328006013292134,0.061136976999043656,0.0009995002498750624,10,10,2000,0
+prob_change,agg,R2 matched random (mean of draws),prob_change | agg | R2 matched random (mean of draws),FP,-0.5827285202539458,-0.6636909104312642,-0.47327814002670443,0.0009995002498750624,10,10,2000,0
+prob_change,cm,guided,prob_change | cm | guided,"ALL (macro, equal-weight groups)",-0.32832550228940494,-0.3874522261538257,-0.2680231252542572,0.0009995002498750624,37,37,2000,0
+prob_change,cm,guided,prob_change | cm | guided,TP,-0.697425739157111,-0.8379228881559396,-0.5320969484460214,0.0009995002498750624,10,10,2000,0
+prob_change,cm,guided,prob_change | cm | guided,FN,-0.03492042875744194,-0.17511479293110768,0.10019874423634427,0.6506746626686657,9,9,2000,0
+prob_change,cm,guided,prob_change | cm | guided,TN,0.05080717915926765,0.010228481091900665,0.11221581086999945,0.0009995002498750624,10,10,2000,0
+prob_change,cm,guided,prob_change | cm | guided,FP,-0.6317630204023345,-0.7059124715355073,-0.5384129799767214,0.0009995002498750624,8,8,2000,0
+prob_change,cm,R2 matched random (mean of draws),prob_change | cm | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",-0.30438216704196,-0.35843185515434156,-0.2388140150090995,0.0009995002498750624,37,37,2000,0
+prob_change,cm,R2 matched random (mean of draws),prob_change | cm | R2 matched random (mean of draws),TP,-0.6142956692290291,-0.7425924390320964,-0.47032247240680053,0.0009995002498750624,10,10,2000,0
+prob_change,cm,R2 matched random (mean of draws),prob_change | cm | R2 matched random (mean of draws),FN,-0.027229475678769863,-0.1654588583617269,0.09522724955535325,0.703648175912044,9,9,2000,0
+prob_change,cm,R2 matched random (mean of draws),prob_change | cm | R2 matched random (mean of draws),TN,0.0295862402562495,0.009543423703195419,0.0602311112952159,0.0009995002498750624,10,10,2000,0
+prob_change,cm,R2 matched random (mean of draws),prob_change | cm | R2 matched random (mean of draws),FP,-0.6055897635162903,-0.7065710909674378,-0.46109801926250055,0.0009995002498750624,8,8,2000,0
+flip_attack_to_normal,single,guided,flip_attack_to_normal | single | guided,"ALL (macro, equal-weight groups)",0.475,0.41666666666666663,0.5,0.0009995002498750624,38,38,2000,0
+flip_attack_to_normal,single,guided,flip_attack_to_normal | single | guided,TP,0.9,0.7,1.0,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,single,guided,flip_attack_to_normal | single | guided,FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,single,guided,flip_attack_to_normal | single | guided,TN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,single,guided,flip_attack_to_normal | single | guided,FP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,single,R2 matched random (mean of draws),flip_attack_to_normal | single | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.44675,0.4114223011363637,0.4776669191919192,0.0009995002498750624,38,38,2000,0
+flip_attack_to_normal,single,R2 matched random (mean of draws),flip_attack_to_normal | single | R2 matched random (mean of draws),TP,0.836,0.71095,0.9460000000000001,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,single,R2 matched random (mean of draws),flip_attack_to_normal | single | R2 matched random (mean of draws),FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,single,R2 matched random (mean of draws),flip_attack_to_normal | single | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,single,R2 matched random (mean of draws),flip_attack_to_normal | single | R2 matched random (mean of draws),FP,0.951,0.898975,0.994,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,agg,guided,flip_attack_to_normal | agg | guided,"ALL (macro, equal-weight groups)",0.475,0.41666666666666663,0.5,0.0009995002498750624,40,40,2000,0
+flip_attack_to_normal,agg,guided,flip_attack_to_normal | agg | guided,TP,0.9,0.7,1.0,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,agg,guided,flip_attack_to_normal | agg | guided,FN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,agg,guided,flip_attack_to_normal | agg | guided,TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,agg,guided,flip_attack_to_normal | agg | guided,FP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,agg,R2 matched random (mean of draws),flip_attack_to_normal | agg | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.44599999999999995,0.40901085633116885,0.4778595779220779,0.0009995002498750624,40,40,2000,0
+flip_attack_to_normal,agg,R2 matched random (mean of draws),flip_attack_to_normal | agg | R2 matched random (mean of draws),TP,0.841,0.7099749999999999,0.9480000000000001,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,agg,R2 matched random (mean of draws),flip_attack_to_normal | agg | R2 matched random (mean of draws),FN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,agg,R2 matched random (mean of draws),flip_attack_to_normal | agg | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,agg,R2 matched random (mean of draws),flip_attack_to_normal | agg | R2 matched random (mean of draws),FP,0.943,0.88895,0.994,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,cm,guided,flip_attack_to_normal | cm | guided,"ALL (macro, equal-weight groups)",0.5,0.5,0.5,0.0009995002498750624,37,37,2000,0
+flip_attack_to_normal,cm,guided,flip_attack_to_normal | cm | guided,TP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,cm,guided,flip_attack_to_normal | cm | guided,FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,cm,guided,flip_attack_to_normal | cm | guided,TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,cm,guided,flip_attack_to_normal | cm | guided,FP,1.0,1.0,1.0,0.0009995002498750624,8,8,2000,0
+flip_attack_to_normal,cm,R2 matched random (mean of draws),flip_attack_to_normal | cm | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.4569375,0.4166614583333333,0.4883333333333334,0.0009995002498750624,37,37,2000,0
+flip_attack_to_normal,cm,R2 matched random (mean of draws),flip_attack_to_normal | cm | R2 matched random (mean of draws),TP,0.8539999999999999,0.72,0.958,0.0009995002498750624,10,10,2000,0
+flip_attack_to_normal,cm,R2 matched random (mean of draws),flip_attack_to_normal | cm | R2 matched random (mean of draws),FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_attack_to_normal,cm,R2 matched random (mean of draws),flip_attack_to_normal | cm | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_attack_to_normal,cm,R2 matched random (mean of draws),flip_attack_to_normal | cm | R2 matched random (mean of draws),FP,0.97375,0.9237500000000001,1.0,0.0009995002498750624,8,8,2000,0
+flip_any,single,guided,flip_any | single | guided,"ALL (macro, equal-weight groups)",0.475,0.41666666666666663,0.5,0.0009995002498750624,38,38,2000,0
+flip_any,single,guided,flip_any | single | guided,TP,0.9,0.7,1.0,0.0009995002498750624,10,10,2000,0
+flip_any,single,guided,flip_any | single | guided,FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_any,single,guided,flip_any | single | guided,TN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_any,single,guided,flip_any | single | guided,FP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_any,single,R2 matched random (mean of draws),flip_any | single | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.45452777777777775,0.42019490665584414,0.4890875,0.0009995002498750624,38,38,2000,0
+flip_any,single,R2 matched random (mean of draws),flip_any | single | R2 matched random (mean of draws),TP,0.836,0.7119249999999999,0.942,0.0009995002498750624,10,10,2000,0
+flip_any,single,R2 matched random (mean of draws),flip_any | single | R2 matched random (mean of draws),FN,0.031111111111111114,0.0,0.08,0.191904047976012,9,9,2000,0
+flip_any,single,R2 matched random (mean of draws),flip_any | single | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_any,single,R2 matched random (mean of draws),flip_any | single | R2 matched random (mean of draws),FP,0.951,0.896975,0.993,0.0009995002498750624,10,10,2000,0
+flip_any,agg,guided,flip_any | agg | guided,"ALL (macro, equal-weight groups)",0.475,0.41666666666666663,0.5,0.0009995002498750624,40,40,2000,0
+flip_any,agg,guided,flip_any | agg | guided,TP,0.9,0.7,1.0,0.0009995002498750624,10,10,2000,0
+flip_any,agg,guided,flip_any | agg | guided,FN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_any,agg,guided,flip_any | agg | guided,TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_any,agg,guided,flip_any | agg | guided,FP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_any,agg,R2 matched random (mean of draws),flip_any | agg | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.45575,0.41569261675824176,0.48908854166666665,0.001,40,40,1999,1
+flip_any,agg,R2 matched random (mean of draws),flip_any | agg | R2 matched random (mean of draws),TP,0.841,0.705975,0.9480749999999997,0.0009995002498750624,10,10,2000,0
+flip_any,agg,R2 matched random (mean of draws),flip_any | agg | R2 matched random (mean of draws),FN,0.039,0.0,0.097,0.2318840579710145,10,10,2000,0
+flip_any,agg,R2 matched random (mean of draws),flip_any | agg | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_any,agg,R2 matched random (mean of draws),flip_any | agg | R2 matched random (mean of draws),FP,0.943,0.8859999999999999,0.994,0.0009995002498750624,10,10,2000,0
+flip_any,cm,guided,flip_any | cm | guided,"ALL (macro, equal-weight groups)",0.5,0.5,0.5,0.0009995002498750624,37,37,2000,0
+flip_any,cm,guided,flip_any | cm | guided,TP,1.0,1.0,1.0,0.0009995002498750624,10,10,2000,0
+flip_any,cm,guided,flip_any | cm | guided,FN,0.0,0.0,0.0,1.0,9,9,2000,0
+flip_any,cm,guided,flip_any | cm | guided,TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_any,cm,guided,flip_any | cm | guided,FP,1.0,1.0,1.0,0.0009995002498750624,8,8,2000,0
+flip_any,cm,R2 matched random (mean of draws),flip_any | cm | R2 matched random (mean of draws),"ALL (macro, equal-weight groups)",0.4622152777777777,0.4260249007936508,0.49566875000000005,0.0009995002498750624,37,37,2000,0
+flip_any,cm,R2 matched random (mean of draws),flip_any | cm | R2 matched random (mean of draws),TP,0.8539999999999999,0.7299999999999999,0.9639999999999999,0.0009995002498750624,10,10,2000,0
+flip_any,cm,R2 matched random (mean of draws),flip_any | cm | R2 matched random (mean of draws),FN,0.021111111111111112,0.0,0.06333333333333334,0.6676661669165417,9,9,2000,0
+flip_any,cm,R2 matched random (mean of draws),flip_any | cm | R2 matched random (mean of draws),TN,0.0,0.0,0.0,1.0,10,10,2000,0
+flip_any,cm,R2 matched random (mean of draws),flip_any | cm | R2 matched random (mean of draws),FP,0.97375,0.9237500000000001,1.0,0.0009995002498750624,8,8,2000,0

@@ -1,0 +1,62 @@
+# Phase 2 protocol: multi-run aggregated LIME vs single-run LIME (frozen Phase 1 baseline).
+# Locked before the pilot. Parameters marked FROZEN-AT-FINAL are hashed into results/phase2/freeze_manifest.json
+# before the held-out test experiment is run, and must not change afterwards.
+protocol_version: 1
+research_question: >
+  Does multi-run aggregation of LIME explanations improve stability and explanation-guided raw-syscall
+  perturbation effectiveness relative to single-run LIME on the unchanged frozen Phase 1 baseline?
+provenance:
+  baseline_artifacts: results/experiments/phase3a_strict_reconstructed_mlp
+  manifest_sha256: 765289887ac57f0a7f08b0d2761c9507e65f8ff98805ab69dc08a6cc312bf4f1
+  assignment_sha256: 5c2b0745cccde2c060ce139fe92e383510ab4237eb0d53b64b9c5f29024e04ba
+  dataset: ADFA-LD Kaggle mirror, archive SHA-256 686825e8...a6454 (see data/README.md); raw-tree SHA-256 38454c05...383a13
+  lime: {version: vendored-compat-0.2.0.1, source: lime/lime_tabular.py, role: stand-in (not official LIME)}
+  prediction_reproduction_tolerance: 1.0e-10
+seeds: {base_seed: 42, derivation: "sha256('42|stream|window_id|run')[:8] as uint32", see: docs/seeds.txt}
+lime:
+  primary_num_samples: 5000            # verified Phase 1 budget (configs/baseline.yaml, Phase 3B metadata)
+  num_features_returned: 150           # full signed vector retained
+  discretize_continuous: false
+  explained_output: attack_probability
+conditions:
+  single_run:        {stream: single, runs: 1,  num_samples: 5000}    # primary BEFORE condition (fresh, seeded)
+  aggregated:        {stream: agg,    runs: 20, num_samples: 5000}    # improvement; individual runs also used for pairwise single-run stability
+  replicate_a:       {stream: repA,   runs: 20, num_samples: 5000}    # independent aggregate replicates (extra runs)
+  replicate_b:       {stream: repB,   runs: 20, num_samples: 5000}
+  compute_matched:   {stream: cm,     runs: 2,  num_samples: 100000}  # 20 x 5000; run 0 used for perturbation, runs 0-1 for stability; SECONDARY
+aggregation: {rule: mean_signed_coefficient_over_all_150_features, ranking: abs_mean_desc_ties_by_index}
+stability: {k: 5, metrics: [pairwise_top5_jaccard, full_ranking_spearman_abs, top5_sign_consistency, replicate_jaccard, replicate_spearman, replicate_sign_consistency], present_only_variants: secondary}
+perturbation:
+  level: raw_syscall_window                # never TF-IDF zeroing
+  edit_rules: Phase 1 src/phase3c.guided_edits (second call of target bigram -> most frequent train-normal syscall; length preserved)
+  budget_b: 3                              # never 5
+  guided_selection: top-3 by |coefficient| within the R2 pool
+  primary_outcome: direction_aware_drop    # s*(logit_before-logit_after), s=+1 predicted attack, -1 predicted normal
+  also_reported: [attack_logit_drop, prob_change, flip_any, flip_attack_to_normal]
+controls:
+  R2_primary: {pool: present & actionable & sign_supporting_for_predicted_class, min_pool: 4, draws: 100, matching: shared seeded priority permutations across methods}
+  R1_secondary: {pool: present & actionable, draws: 100}
+eligibility:
+  ess_min: 100
+  min_present_features: 3
+  min_pool_guided: 3
+  min_pool_r2: 4
+  eligibility_explanation: aggregated 20-run explanation (primary improvement); single-run and compute-matched arms are flagged per window and excluded from a comparison when their own pool is too small
+sampling:
+  targets: {TP: 40, TN: 40, FN: 40, FP: 40}    # up to; never balanced down, never filters relaxed
+  global_cluster_cap: 2                         # identical-content clusters, all groups combined
+  cluster_id: sha256 of the trace's syscall sequence
+  algorithm: seeded two-pass greedy; group order FP, FN, TP, TN; complete LIME scan for FP and FN
+  order_seed: 42
+statistics:
+  unit: identical-content cluster
+  bootstrap_replicates: 2000                    # >= 1000 required
+  ci: percentile 95%
+  aggregation_across_groups: equal-weight macro-average plus per-group
+  primary_comparisons: [single_guided_minus_R2, agg_guided_minus_R2, agg_guided_minus_single_guided]
+  secondary_comparisons: [cm_guided_minus_agg_guided, R1 versions]
+  multiplicity: Holm over the primary comparisons; p-values secondary
+splits:
+  pilot: {split: validation, windows_per_group: 10}
+  final: {split: test, gate: "protocol and selected-window manifest frozen and hashed; pilot passed; run exactly once"}
+outputs: {root: results/phase2, pilot_root: results/phase2/pilot, final_root: results/phase2}
