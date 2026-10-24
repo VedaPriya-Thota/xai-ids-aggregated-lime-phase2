@@ -44,3 +44,15 @@ def test_frozen_load_reproduces_phase1_validation_predictions_and_is_unmodified(
     assert fz.provenance["validation_max_abs_prediction_diff"] <= 1e-10
     assert len(fz.names) == 150 and np.isfinite(fz.train_std).all() and (fz.train_std > 0).all()
     F.verify_protected()                                              # loading must not have touched any protected file
+
+
+def test_append_only_exception_allows_append_but_not_edits(tmp_path):
+    rec = json.loads(F.BASELINE_HASHES.read_text())
+    assert "AI_USAGE.md" in rec["append_only_authorized"]
+    out = F.verify_protected()
+    assert out["append_only_verified"] in ([], ["AI_USAGE.md"])
+    # simulate an edit of the ORIGINAL bytes: the baseline hash must then fail
+    rec2 = json.loads(json.dumps(rec)); rec2["sha256"]["AI_USAGE.md"] = "0" * 64
+    p = tmp_path / "b.json"; p.write_text(json.dumps(rec2))
+    with pytest.raises(RuntimeError, match="modified"):
+        F.verify_protected(p)

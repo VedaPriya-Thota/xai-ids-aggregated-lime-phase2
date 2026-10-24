@@ -1,0 +1,23 @@
+{
+ "protocol_sha256": "d99a3f57470fbf413d6d250cc2bbb40d98e61d998d69870fb2b005292fb37017",
+ "selected_windows_sha256": "443880563354e37260a4d0f52d8d6ca41835d8379905927ed3d4fec8fa419778",
+ "code_sha256": {
+  "src/phase2/__init__.py": "544a2e9034630002c1160cebf2616ff82705d3864af77701d23fb0d6124eb2ce",
+  "src/phase2/analyze.py": "f466257ef0c895eba00518996e36fc167ed5f6e82bd991d5659408dc185ba144",
+  "src/phase2/evaluate_perturb.py": "c54027f778c297fb343d05e1c2cb1a0da21dfe49f3339a5700f9f264ec6b48e3",
+  "src/phase2/explain_aggregated.py": "e7af768cec3ced41ba5353491ff3b55e5ac33ed9d768a72a9d37b8a56efabc9a",
+  "src/phase2/frozen.py": "8c2200c0e2d27376f137a6317b933109cb2d1c92699ce959f139d9343c754ce7",
+  "src/phase2/metrics_stability.py": "0e21ea18aca020a9e2a43857a1fa5cfe281b095bad19a771a9c29eda1e053624",
+  "src/phase2/perturb_raw_sequence.py": "b455c4258f47ca09e4e9c644f9310e91a374137f39f3c3f64fbfda78fb290064",
+  "src/phase2/run_phase2.py": "23a3f7fffb2c7390409184a25fad1bc953f8903f0e4dea6ae0d10bb7d5a81805",
+  "src/phase2/sampling.py": "df2921fe9d770440e5286fe66b61512215f37a5fd3e87a337b85c1be2d5635e6"
+ },
+ "command": "/home/claude/p2/xai-ids-lime-shap-replication-main/src/phase2/run_phase2.py final",
+ "n_selected": 160,
+ "protected_files": {
+  "n_files_verified": 167,
+  "changed": [],
+  "missing": []
+ },
+ "frozen_at_utc": "2026-10-24T05:52:37Z"
+}

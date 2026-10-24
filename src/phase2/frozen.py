@@ -48,18 +48,30 @@ def assert_lime_provenance() -> dict[str, Any]:
 
 
 def verify_protected(baseline: Path = BASELINE_HASHES) -> dict[str, Any]:
-    """Every file recorded at baseline must still exist with an identical SHA-256."""
-    rec = json.loads(Path(baseline).read_text())["sha256"]
-    changed, missing = [], []
+    """Every file recorded at baseline must still exist with an identical SHA-256.
+
+    The only exception is a file listed under 'append_only_authorized' in the baseline JSON: it may have text appended, but its
+    original bytes must still hash to the baseline value."""
+    data = json.loads(Path(baseline).read_text())
+    rec, append_only = data["sha256"], data.get("append_only_authorized", {})
+    changed, missing, appended = [], [], []
     for rel, h in rec.items():
         p = PROJECT_ROOT / rel
         if not p.exists():
             missing.append(rel)
-        elif sha256_bytes(p.read_bytes()) != h:
+            continue
+        raw = p.read_bytes()
+        if rel in append_only:
+            n = int(append_only[rel]["original_bytes"])
+            if len(raw) < n or sha256_bytes(raw[:n]) != h:
+                changed.append(rel)
+            elif len(raw) > n:
+                appended.append(rel)
+        elif sha256_bytes(raw) != h:
             changed.append(rel)
     if changed or missing:
         raise RuntimeError(f"Protected Phase 1 files modified={changed} missing={missing}")
-    return {"n_files_verified": len(rec), "changed": [], "missing": []}
+    return {"n_files_verified": len(rec), "changed": [], "missing": [], "append_only_verified": appended}
 
 
 _ACT = {

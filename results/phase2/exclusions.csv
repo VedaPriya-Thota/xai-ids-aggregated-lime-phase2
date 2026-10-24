@@ -1,0 +1,16 @@
+method,group,windows_in_frozen_sample,guided_infeasible_pool_lt3,R2_uninformative_pool_eq3,informative_R2_pool_ge4,pct_guided_infeasible,pct_R2_uninformative,pct_excluded_from_primary_R2_comparison
+single,TP,40,0,1,39,0.0,2.5,2.5
+single,FN,40,1,10,29,2.5,25.0,27.5
+single,TN,40,0,2,38,0.0,5.0,5.0
+single,FP,40,0,2,38,0.0,5.0,5.0
+single,ALL,160,1,15,144,0.625,9.375,10.0
+agg,TP,40,0,0,40,0.0,0.0,0.0
+agg,FN,40,0,0,40,0.0,0.0,0.0
+agg,TN,40,0,0,40,0.0,0.0,0.0
+agg,FP,40,0,0,40,0.0,0.0,0.0
+agg,ALL,160,0,0,160,0.0,0.0,0.0
+cm,TP,40,1,2,37,2.5,5.0,7.5
+cm,FN,40,0,9,31,0.0,22.5,22.5
+cm,TN,40,1,1,38,2.5,2.5,5.0
+cm,FP,40,0,6,34,0.0,15.0,15.0
+cm,ALL,160,2,18,140,1.25,11.25,12.5

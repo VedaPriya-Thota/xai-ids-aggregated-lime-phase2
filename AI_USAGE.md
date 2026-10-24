@@ -40,3 +40,10 @@ No reported experimental number is accepted merely because an AI assistant produ
 ## LIME disclosure
 
 The completed Phase 3B/3C work used a vendored LIME-compatible local-surrogate implementation because the official `lime==0.2.0.1` package could not be installed in the offline environment. The project does not claim that the official external package was executed.
+
+## Phase 2 (aggregated LIME) AI usage
+
+An AI assistant (Claude) wrote the Phase 2 code under `src/phase2/`, the tests, the locked protocol, the analysis scripts and the drafts of `docs/phase2_*.md`.
+Human responsibilities: approving the research gap and protocol, supplying and verifying the raw dataset, reviewing the code and the reported numbers, and deciding what to submit.
+All reported Phase 2 numbers come from `results/phase2/*.csv` produced by the committed commands; none were entered by hand. Literature details were checked against search results (LIME, SHAP, Visani et al., Hooker et al., Warnecke et al.)
+and the Gaspar et al. record already in the repository. This append-only edit is the single authorised modification to a Phase 1 file; the original text above it is unchanged.

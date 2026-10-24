@@ -89,7 +89,7 @@ def _wide(P: pd.DataFrame, col: str) -> pd.DataFrame:
     return meta.join(g).join(r2).join(r1)
 
 
-def perturbation_tables(P: pd.DataFrame, n_boot: int) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def perturbation_tables(P: pd.DataFrame, n_boot: int, sel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     summ_rows, cmp_rows, excl = [], [], []
     seed = BOOT_SEED + 1000
     for col in ["direction_aware_drop", "attack_logit_drop", "prob_change", "flip_attack_to_normal", "flip_any"]:
@@ -120,14 +120,17 @@ def perturbation_tables(P: pd.DataFrame, n_boot: int) -> tuple[pd.DataFrame, pd.
                                  "cohens_dz_window_level": float(d.v.mean() / sd) if sd and sd > 0 else np.nan}); seed += 1
     for m in ["single", "agg", "cm"]:
         for g in GROUPS + ["ALL"]:
-            s = P[(P.method == m) & ((P.group == g) | (g == "ALL"))].drop_duplicates("window_id")
-            n = len(s)
+            tot = sel if g == "ALL" else sel[sel.group == g]
+            s = P[(P.method == m) & P.window_id.isin(tot.window_id)].drop_duplicates("window_id")
+            n = len(tot)
             if n:
-                excl.append({"method": m, "group": g, "windows": n,
-                             "guided_infeasible_pool_lt3": int((s.status == "guided_infeasible").sum()),
-                             "R2_uninformative_pool_eq3": int((s.status == "R2_uninformative").sum()),
-                             "informative_R2_pool_ge4": int((s.status == "ok").sum()),
-                             "pct_R2_uninformative_or_infeasible": 100 * float((s.status != "ok").mean())})
+                # a window whose pool has < 3 eligible features produces no perturbation rows at all (never padded)
+                infeasible = n - len(s)
+                uninf = int((s.status == "R2_uninformative").sum())
+                excl.append({"method": m, "group": g, "windows_in_frozen_sample": n, "guided_infeasible_pool_lt3": int(infeasible),
+                             "R2_uninformative_pool_eq3": uninf, "informative_R2_pool_ge4": int((s.status == "ok").sum()),
+                             "pct_guided_infeasible": 100 * infeasible / n, "pct_R2_uninformative": 100 * uninf / n,
+                             "pct_excluded_from_primary_R2_comparison": 100 * (infeasible + uninf) / n})
     return pd.DataFrame(summ_rows), pd.DataFrame(cmp_rows), pd.DataFrame(excl)
 
 
@@ -199,7 +202,8 @@ def run(root="results/phase2") -> None:
     S, P = pd.read_csv(root / "stability_results.csv"), pd.read_csv(root / "perturbation_results.csv")
     st = stability_tables(S, n_boot); st.to_csv(root / "stability_summary.csv", index=False)
     rt = runtime_table(S); rt.to_csv(root / "runtime_summary.csv", index=False)
-    ps, pc, ex = perturbation_tables(P, n_boot)
+    sel = pd.read_csv(root / "selected_windows.csv")
+    ps, pc, ex = perturbation_tables(P, n_boot, sel)
     ps.to_csv(root / "perturbation_summary.csv", index=False)
     primary = pc[(pc.primary_family) & pc.group.str.startswith("ALL") & (pc.comparison != pc.comparison.iloc[0] + "x")]
     fam = primary[primary.comparison.isin(["single guided - single R2", "agg guided - agg R2", "agg guided - single guided"])]

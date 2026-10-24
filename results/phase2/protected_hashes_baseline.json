@@ -1,4 +1,10 @@
 {
+ "append_only_authorized": {
+  "AI_USAGE.md": {
+   "original_bytes": 4514,
+   "reason": "Phase 2 task requires an AI-usage disclosure; only appending is permitted, original bytes must hash to the baseline value"
+  }
+ },
  "commit": "0a1b628527dfb1ab4fa07b623321ee70ab945c7f",
  "n_files": 167,
  "sha256": {
