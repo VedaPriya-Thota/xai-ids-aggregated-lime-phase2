@@ -152,13 +152,16 @@ def figures(root: Path, S: pd.DataFrame, P: pd.DataFrame, rt: pd.DataFrame) -> l
     pos, data, labels = 0, [], []
     for g in GROUPS:
         d = S[S.group == g]
-        for col, lab in (("single_jaccard", "single"), ("rep_jaccard", "20-run agg."), ("cm_jaccard", "compute-matched")):
+        for col, lab in (("single_jaccard", "1x5k"), ("rep_jaccard", "20x5k"), ("cm_jaccard", "1x100k")):
             data.append(d[col].dropna().to_numpy()); labels.append(f"{g}\n{lab}")
     bp = ax.boxplot(data, patch_artist=True, widths=0.6)
     cols = ["#9ecae1", "#fdae6b", "#a1d99b"] * 4
     for patch, c in zip(bp["boxes"], cols): patch.set_facecolor(c)
     ax.set_xticks(range(1, len(labels) + 1)); ax.set_xticklabels(labels, fontsize=7)
-    ax.set_ylabel("top-5 Jaccard (per window)"); ax.set_title("Explanation stability: single-run vs 20-run aggregate vs compute-matched")
+    ax.set_ylabel("top-5 Jaccard (per window)"); ax.set_title("Explanation stability: single run vs 20-run aggregate vs compute-matched")
+    from matplotlib.patches import Patch
+    ax.legend(handles=[Patch(color="#9ecae1", label="single run (1x5k), pairwise"), Patch(color="#fdae6b", label="20-run aggregate (20x5k), two replicates"),
+                       Patch(color="#a1d99b", label="compute-matched (1x100k), two runs")], fontsize=7, loc="lower left", bbox_to_anchor=(0.0, 0.1))
     ax.axhline(S.chance_jaccard_150.mean(), ls=":", c="grey"); ax.text(0.6, S.chance_jaccard_150.mean() + 0.01, "chance (150 features)", fontsize=7, color="grey")
     fig.tight_layout(); fig.savefig(fd / "fig1_top5_jaccard.png", dpi=160); plt.close(fig); out.append("fig1_top5_jaccard.png")
     # 2/3. guided vs matched random
