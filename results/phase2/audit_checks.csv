@@ -1,0 +1,86 @@
+check,result,detail
+"160 selected windows, 40 per group",PASS,
+no duplicate windows,PASS,
+152 unique identical-content clusters,PASS,152
+global cap: max 2 windows per cluster (all groups combined),PASS,max=2
+per-group clusters = 38/40/40/38 (TP/FN/TN/FP),PASS,"{'FN': 40, 'FP': 38, 'TN': 40, 'TP': 38}"
+"every selected window: >=3 present, ESS>=100, aggregate R2 pool>=4",PASS,
+all selected windows are from the test split,PASS,
+selected-window manifest hash equals freeze manifest,PASS,
+protocol hash equals freeze manifest,PASS,
+eligibility_report final_selected = 40 each,PASS,
+"protocol: b=3, k=5, bootstrap>=1000, cap=2",PASS,
+all stability windows = selected windows,PASS,
+macro (equal-weight over groups) reproduces summary: single_jaccard,PASS,0.7749
+macro (equal-weight over groups) reproduces summary: rep_jaccard,PASS,0.9229
+macro (equal-weight over groups) reproduces summary: cm_jaccard,PASS,0.9938
+macro (equal-weight over groups) reproduces summary: single_spearman,PASS,0.8057
+macro (equal-weight over groups) reproduces summary: rep_spearman,PASS,0.9768
+macro (equal-weight over groups) reproduces summary: cm_spearman,PASS,0.9610
+stability doc claim: single-run: pairwise top-5 Jaccard,PASS,"csv 0.7749 [0.7548,0.7952] vs doc 0.775 [0.755,0.795]"
+stability doc claim: 20-run aggregate: Jaccard between,PASS,"csv 0.9229 [0.9017,0.9439] vs doc 0.923 [0.902,0.944]"
+stability doc claim: compute-matched single run (100k): Jaccard,PASS,"csv 0.9938 [0.9855,1.0000] vs doc 0.994 [0.986,1.0]"
+stability doc claim: single-run: pairwise full-ranking Spearman,PASS,"csv 0.8057 [0.8011,0.8106] vs doc 0.806 [0.801,0.811]"
+stability doc claim: 20-run aggregate: Spearman,PASS,"csv 0.9768 [0.9761,0.9776] vs doc 0.977 [0.976,0.978]"
+stability doc claim: compute-matched single run: Spearman,PASS,"csv 0.9610 [0.9591,0.9628] vs doc 0.961 [0.959,0.963]"
+stability doc claim: PAIRED difference: aggregate-replicate Jaccard,PASS,"csv 0.1480 [0.1245,0.1717] vs doc 0.148 [0.125,0.172]"
+stability doc claim: PAIRED difference: aggregate-replicate Spearman,PASS,"csv 0.1711 [0.1663,0.1759] vs doc 0.171 [0.166,0.176]"
+stability doc claim: PAIRED difference: aggregate Jaccard minus compute-matched,PASS,"csv -0.0708 [-0.0933,-0.0483] vs doc -0.071 [-0.093,-0.048]"
+chance baselines 0.019 / 0.494,PASS,
+unrestricted aggregate top-5 present share 13.6%,PASS,
+surrogate R2 0.385 / 0.442,PASS,
+"ESS 4,153 (5k) / 92,560 (100k)",PASS,
+present-only Jaccard 0.823 vs 0.948,PASS,
+by-group Jaccard single/aggregate: FN .72/.90 FP .81/.91 TN .71/.90 TP .86/.98,PASS,"{'FN': {'single_jaccard': 0.72, 'rep_jaccard': 0.9}, 'FP': {'single_jaccard': 0.81, 'rep_jaccard': 0.91}, 'TN': {'single_jaccard': 0.71, 'rep_jaccard': 0.9}, 'TP': {'single_jaccard': 0.86, 'rep_jaccard': 0.98}}"
+"top-5 sign consistency == 1.0 for every window (single_sign_consistency); saturated, no NaN",PASS,
+"top-5 sign consistency == 1.0 for every window (rep_sign_consistency); saturated, no NaN",PASS,
+"top-5 sign consistency == 1.0 for every window (cm_sign_consistency); saturated, no NaN",PASS,
+perturbation doc claim: single guided - single R2,PASS,"csv 0.8209 [0.6018,1.0365] holm 0.0030"
+perturbation doc claim: agg guided - agg R2,PASS,"csv 0.8051 [0.6088,1.0075] holm 0.0030"
+perturbation doc claim: agg guided - single guided,PASS,"csv -0.0510 [-0.1504,0.0542] holm 0.3528"
+"difference in effect over control -0.021 [-0.148,+0.095]",PASS,
+"cm guided - agg guided -0.101 [-0.267,+0.065]",PASS,
+"cm guided - cm R2 +0.520 [+0.293,+0.728]",PASS,
+macro flip (zeros for predicted-normal groups): +0.045 / +0.047 / 0.000,PASS,
+agg guided-R2 by group TP +1.26 TN +1.14 FP +0.74 FN +0.09,PASS,"{'TP': np.float64(1.256), 'TN': np.float64(1.136), 'FP': np.float64(0.741), 'FN': np.float64(0.088)}"
+guided beats R1 by about 1.6 logit units (agg/single),PASS,"[np.float64(1.597), np.float64(1.64)]"
+Holm-adjusted p recomputed from bootstrap p-values,PASS,"{'single guided - single R2': np.float64(0.003), 'agg guided - agg R2': np.float64(0.003), 'agg guided - single guided': np.float64(0.3528)}"
+independent recompute: single guided-R2,PASS,"est 0.8209 CI [0.599,1.042] vs saved [0.602,1.037] (different bootstrap seed)"
+independent recompute: agg guided-R2,PASS,"est 0.8051 CI [0.597,1.019] vs saved [0.609,1.007] (different bootstrap seed)"
+independent recompute: agg-single guided,PASS,"est -0.0510 CI [-0.152,0.049] vs saved [-0.150,0.054] (different bootstrap seed)"
+exclusions: single 1 infeasible+15 uninformative=16 (10.0%); cm 2+18=20 (12.5%); agg 0,PASS,
+edit success ~79-80% (guided),PASS,"[0.794, 0.804, 0.786]"
+all edit failures are 'occurrence_consumed_by_prior_edit',PASS,
+runtime per window: 0.118 / 2.245 / 1.169 / 4.658 / 1.181; total 9.37,PASS,"[0.118, 2.245, 1.169, 4.658, 1.181, 9.37]"
+"runtime ratios 19.1x aggregate, 9.9x compute-matched; 505,000 model calls",PASS,
+research-gap value '0.775' also in results doc,PASS,
+research-gap value '0.923' also in results doc,PASS,
+research-gap value '+0.148' also in results doc,PASS,
+research-gap value '+0.125 to +0.172' also in results doc,PASS,
+research-gap value '0.806' also in results doc,PASS,
+research-gap value '0.977' also in results doc,PASS,
+research-gap value '+0.821' also in results doc,PASS,
+research-gap value '+0.805' also in results doc,PASS,
+research-gap value '-0.051' also in results doc,PASS,
+research-gap value '-0.150 to +0.054' also in results doc,PASS,
+research-gap value '0.994' also in results doc,PASS,
+research-gap states 38 FP clusters and 19x cost,PASS,
+"conditional flip table (single): 72/77 guided flips, rate, R2 rate, guided-minus-R2 TP/FP/pooled + CI",PASS,"pooled diff 0.0909 [0.0488,0.1331]"
+"conditional flip table (agg): 75/80 guided flips, rate, R2 rate, guided-minus-R2 TP/FP/pooled + CI",PASS,"pooled diff 0.0941 [0.0537,0.1340]"
+"conditional flip table (cm): 65/71 guided flips, rate, R2 rate, guided-minus-R2 TP/FP/pooled + CI",PASS,"pooled diff 0.0611 [0.0187,0.1054]"
+"conditional flip, aggregate minus single guided = 0.000 [0,0], 80 windows",PASS,
+conditional flip denominators contain only TP/FP (predicted-attack) windows,PASS,
+"predicted-normal windows (TN, FN) have flip_attack_to_normal == 0 in every arm",PASS,
+supplementary Spearman: single run: pairwise signed-vector Spearman,PASS,"0.8734 [0.8722,0.8747]"
+supplementary Spearman: 20-run aggregate replicates: signed-vector Spearman,PASS,"0.9890 [0.9885,0.9894]"
+supplementary Spearman: compute-matched 1x100k: signed-vector Spearman,PASS,"0.9836 [0.9829,0.9843]"
+supplementary Spearman: paired: aggregate minus single (signed),PASS,"0.1156 [0.1144,0.1167]"
+supplementary Spearman: paired: aggregate minus compute-matched (signed),PASS,"0.0053 [0.0044,0.0062]"
+"supplementary Spearman: paired: aggregate minus compute-matched (|w| ranking, predeclared metric)",PASS,"0.0159 [0.0139,0.0177]"
+cached coefficients reproduce saved |w| Spearman (max abs diff <= 1e-12),PASS,
+"guided top-3: identical set in 132/159 (83.0%), identical ordered list 89, same-set-different-order 43 (16 with different outcome), different set 27",PASS,
+identical ordered guided lists give identical outcomes (max |diff| = 0),PASS,
+different-set windows: mean aggregate-minus-single = -0.197,PASS,-0.1968
+manifest verified against raw dataset (Phase 1 verifier),PASS,
+selected cluster IDs equal sha256 of raw syscall sequences,PASS,
+every selected cluster maps to exactly one distinct syscall sequence,PASS,

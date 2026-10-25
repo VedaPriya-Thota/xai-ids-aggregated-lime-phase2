@@ -1,0 +1,7 @@
+quantity,group,estimate,ci_low,ci_high,p_boot,n_windows,n_clusters,n_boot,n_empty_group
+single run: pairwise signed-vector Spearman,"ALL (macro, equal-weight groups)",0.8734033341832738,0.8721517381487921,0.8747227176212632,0.0009995002498750624,160,152,2000,0
+20-run aggregate replicates: signed-vector Spearman,"ALL (macro, equal-weight groups)",0.9889817102982356,0.988509064225517,0.9894274966179885,0.0009995002498750624,160,152,2000,0
+compute-matched 1x100k: signed-vector Spearman,"ALL (macro, equal-weight groups)",0.9836352504555759,0.9829177563972582,0.9843324635124605,0.0009995002498750624,160,152,2000,0
+paired: aggregate minus single (signed),"ALL (macro, equal-weight groups)",0.11557837611496183,0.11440995725408747,0.11673749946769844,0.0009995002498750624,160,152,2000,0
+paired: aggregate minus compute-matched (signed),"ALL (macro, equal-weight groups)",0.0053464598426596725,0.0044151827815052955,0.006226377183978345,0.0009995002498750624,160,152,2000,0
+"paired: aggregate minus compute-matched (|w| ranking, predeclared metric)","ALL (macro, equal-weight groups)",0.015859171518734186,0.013908979264390718,0.017659000369194343,0.0009995002498750624,160,152,2000,0

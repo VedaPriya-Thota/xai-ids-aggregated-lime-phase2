@@ -47,3 +47,9 @@ An AI assistant (Claude) wrote the Phase 2 code under `src/phase2/`, the tests, 
 Human responsibilities: approving the research gap and protocol, supplying and verifying the raw dataset, reviewing the code and the reported numbers, and deciding what to submit.
 All reported Phase 2 numbers come from `results/phase2/*.csv` produced by the committed commands; none were entered by hand. Literature details were checked against search results (LIME, SHAP, Visani et al., Hooker et al., Warnecke et al.)
 and the Gaspar et al. record already in the repository. This append-only edit is the single authorised modification to a Phase 1 file; the original text above it is unchanged.
+
+### Phase 2 post-run audit disclosure
+
+A further AI-assisted audit (Claude) re-verified the Phase 2 report against the saved outputs, added `scripts/phase2_audit_checks.py` and `scripts/phase2_supplementary_analysis.py`, corrected report wording
+(metric definitions, flip-rate denominators, the compute-matched comparison) and documented post-freeze code changes in `docs/phase2_postfreeze_amendments.md`. It did not re-run the held-out experiment.
+Human responsibilities are unchanged: reviewing these corrections and deciding what to submit. This is another append-only edit; the text above it is unchanged.

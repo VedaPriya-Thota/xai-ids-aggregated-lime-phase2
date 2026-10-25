@@ -166,7 +166,7 @@ def figures(root: Path, S: pd.DataFrame, P: pd.DataFrame, rt: pd.DataFrame) -> l
     fig.tight_layout(); fig.savefig(fd / "fig1_top5_jaccard.png", dpi=160); plt.close(fig); out.append("fig1_top5_jaccard.png")
     # 2/3. guided vs matched random
     for fig_name, col, ylab, ttl in (("fig2_guided_vs_random_logit_drop.png", "direction_aware_drop", "direction-aware attack-logit drop\n(positive = moved away from original decision)", "Guided vs matched-random (R2) raw-syscall edits"),
-                                     ("fig3_guided_vs_random_flip_rate.png", "flip_attack_to_normal", "attack-to-normal flip rate\n(over predicted-attack windows)", "Attack-to-normal flips: guided vs matched random (R2)")):
+                                     ("fig3_guided_vs_random_flip_rate.png", "flip_attack_to_normal", "attack-to-normal flip rate\n(conditional: windows predicted attack)", "Attack-to-normal flip rate, conditional on predicted attack (TP, FP): guided vs matched random (R2)")):
         W = _wide(P, col).reset_index()
         fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharey=True)
         for ax, m in zip(axes, ["single", "agg"]):
@@ -179,7 +179,12 @@ def figures(root: Path, S: pd.DataFrame, P: pd.DataFrame, rt: pd.DataFrame) -> l
                 gv.append(d[f"guided_{m}"].mean() if len(d) else np.nan); rv.append(d[f"r2_{m}"].mean() if len(d) else np.nan)
             ax.bar(xs - w / 2, gv, w, label="guided top-3", color="#fd8d3c"); ax.bar(xs + w / 2, rv, w, label="R2 random (mean of draws)", color="#9e9ac8")
             ax.set_xticks(xs); ax.set_xticklabels(GROUPS); ax.set_title({"single": "single-run LIME", "agg": "20-run aggregated LIME"}[m]); ax.axhline(0, c="k", lw=0.5)
-        axes[0].set_ylabel(ylab, fontsize=8); axes[0].legend(fontsize=7); fig.suptitle(ttl, fontsize=10)
+            if col == "flip_attack_to_normal":
+                for xi, g_ in zip(xs, GROUPS):
+                    if g_ in ("FN", "TN"):
+                        ax.text(xi, 0.04, "n/a\n(predicted\nnormal)", ha="center", fontsize=7, color="grey")
+                ax.set_ylim(0, 1.18)
+        axes[0].set_ylabel(ylab, fontsize=8); axes[0].legend(fontsize=7, loc="upper center", ncol=2); fig.suptitle(ttl, fontsize=9)
         fig.tight_layout(); fig.savefig(fd / fig_name, dpi=160); plt.close(fig); out.append(fig_name)
     # 4. runtime
     fig, ax = plt.subplots(figsize=(8, 3.8))

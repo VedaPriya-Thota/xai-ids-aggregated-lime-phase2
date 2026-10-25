@@ -1,0 +1,64 @@
+method,control,quantity,scope,denominator,guided_flip_windows,estimate,ci_low,ci_high,p_boot,n_windows,n_clusters,n_boot,n_empty_group
+single,R2,guided flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",37.0,0.9487179487179487,0.875,1.0,0.0009995002498750624,39,37,2000,0
+single,R2,guided flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",35.0,0.9210526315789473,0.8,1.0,0.0009995002498750624,38,36,2000,0
+single,R2,guided flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",72.0,0.935064935064935,0.8607594936708861,0.987012987012987,0.0009995002498750624,77,73,2000,0
+single,R2,guided flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",72.0,0.934885290148448,0.8640336476745335,0.9888888888888889,0.0009995002498750624,77,73,2000,0
+single,R2,R2 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.8325641025641025,0.7599935897435898,0.89795,0.0009995002498750624,39,37,2000,0
+single,R2,R2 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8560526315789472,0.748974358974359,0.9425277777777776,0.0009995002498750624,38,36,2000,0
+single,R2,R2 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.8441558441558441,0.7760709256329114,0.9019820344129555,0.0009995002498750624,77,73,2000,0
+single,R2,R2 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.8443083670715248,0.7780174831081081,0.9018494029683333,0.0009995002498750624,77,73,2000,0
+single,R2,guided minus R2,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.11615384615384614,0.046985256410256415,0.18462837837837828,0.0009995002498750624,39,37,2000,0
+single,R2,guided minus R2,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.06500000000000002,0.0244671052631579,0.11378534303534305,0.0009995002498750624,38,36,2000,0
+single,R2,guided minus R2,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.09090909090909093,0.048848101265822785,0.13307770270270272,0.0009995002498750624,77,73,2000,0
+single,R2,guided minus R2,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.09057692307692308,0.04946528540474379,0.13404825323443742,0.0009995002498750624,77,73,2000,0
+single,R1,R1 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.78775,0.7128181818181819,0.8525016025641026,0.0009995002498750624,40,38,2000,0
+single,R1,R1 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8412499999999999,0.732063953488372,0.9287179487179487,0.0009995002498750624,40,38,2000,0
+single,R1,R1 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.8145,0.7497670829744474,0.8724366883116884,0.0009995002498750624,80,76,2000,0
+single,R1,R1 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.8145,0.7488539845571096,0.8689585702341136,0.0009995002498750624,80,76,2000,0
+single,R1,guided minus R1,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.16225,0.08929595791805095,0.23513414634146343,0.0009995002498750624,40,38,2000,0
+single,R1,guided minus R1,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.08375,0.03749198717948718,0.13667307692307687,0.0009995002498750624,40,38,2000,0
+single,R1,guided minus R1,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.123,0.07609393147502903,0.16962357399593686,0.0009995002498750624,80,76,2000,0
+single,R1,guided minus R1,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.123,0.0775686108534323,0.16963126890716582,0.0009995002498750624,80,76,2000,0
+agg,R2,guided flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",38.0,0.95,0.8780487804878049,1.0,0.0009995002498750624,40,38,2000,0
+agg,R2,guided flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",37.0,0.925,0.8138427464008859,1.0,0.0009995002498750624,40,38,2000,0
+agg,R2,guided flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",75.0,0.9375,0.8658536585365854,0.9875,0.0009995002498750624,80,76,2000,0
+agg,R2,guided flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",75.0,0.9375,0.8670078397212544,0.9893617021276595,0.0009995002498750624,80,76,2000,0
+agg,R2,R2 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.8242499999999999,0.7519461890243903,0.8890006097560976,0.0009995002498750624,40,38,2000,0
+agg,R2,R2 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8625,0.751462543554007,0.9471249999999999,0.0009995002498750624,40,38,2000,0
+agg,R2,R2 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.843375,0.7754242724867725,0.8981281249999999,0.0009995002498750624,80,76,2000,0
+agg,R2,R2 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.843375,0.7814771810825513,0.8993054248935346,0.0009995002498750624,80,76,2000,0
+agg,R2,guided minus R2,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.12574999999999997,0.05599375000000001,0.19461842105263155,0.0009995002498750624,40,38,2000,0
+agg,R2,guided minus R2,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.0625,0.023944838056680164,0.10632039473684211,0.0009995002498750624,40,38,2000,0
+agg,R2,guided minus R2,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.094125,0.05365743461651484,0.1339512108262108,0.0009995002498750624,80,76,2000,0
+agg,R2,guided minus R2,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.09412499999999999,0.05136433133308133,0.13585055906747867,0.0009995002498750624,80,76,2000,0
+agg,R1,R1 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.78775,0.7107495426829268,0.8517948717948718,0.0009995002498750624,40,38,2000,0
+agg,R1,R1 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8412499999999999,0.7251103233125354,0.9271907894736843,0.0009995002498750624,40,38,2000,0
+agg,R1,R1 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.8145,0.7487752613240418,0.8709038461538461,0.0009995002498750624,80,76,2000,0
+agg,R1,R1 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.8145,0.7480242400715227,0.8721440468707911,0.0009995002498750624,80,76,2000,0
+agg,R1,guided minus R1,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.16225,0.08803942144072605,0.23631815114709853,0.0009995002498750624,40,38,2000,0
+agg,R1,guided minus R1,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.08375,0.04,0.1336842105263158,0.0009995002498750624,40,38,2000,0
+agg,R1,guided minus R1,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.123,0.0778835817524842,0.16787684294871794,0.0009995002498750624,80,76,2000,0
+agg,R1,guided minus R1,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.123,0.0780720823798627,0.1695068337417824,0.0009995002498750624,80,76,2000,0
+cm,R2,guided flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",34.0,0.918918918918919,0.8333333333333334,1.0,0.0009995002498750624,37,35,2000,0
+cm,R2,guided flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",31.0,0.9117647058823529,0.7777777777777778,1.0,0.0009995002498750624,34,32,2000,0
+cm,R2,guided flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",65.0,0.9154929577464789,0.8355593607305937,0.9852941176470589,0.0009995002498750624,71,67,2000,0
+cm,R2,guided flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",65.0,0.915341812400636,0.833842737722048,0.9848484848484849,0.0009995002498750624,71,67,2000,0
+cm,R2,R2 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.8448648648648648,0.7684176691729323,0.9155614035087719,0.0009995002498750624,37,35,2000,0
+cm,R2,R2 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8647058823529412,0.7324216216216217,0.962193418560606,0.0009995002498750624,34,32,2000,0
+cm,R2,R2 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.8543661971830986,0.7813879504504505,0.9150740967544396,0.0009995002498750624,71,67,2000,0
+cm,R2,R2 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.854785373608903,0.7776061866554054,0.916713511305423,0.0009995002498750624,71,67,2000,0
+cm,R2,guided minus R2,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.07405405405405405,0.0018840682788051231,0.14722738095238092,0.04397801099450275,37,35,2000,0
+cm,R2,guided minus R2,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.04705882352941177,0.009729133545310024,0.09382642602495546,0.009995002498750625,34,32,2000,0
+cm,R2,guided minus R2,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.06112676056338029,0.018730300723258472,0.10536956521739127,0.001999000499750125,71,67,2000,0
+cm,R2,guided minus R2,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.060556438791732906,0.019055212710084035,0.10466482683982685,0.005997001499250375,71,67,2000,0
+cm,R1,R1 matched-random flip rate,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.7876923076923076,0.710217105263158,0.8515426829268291,0.0009995002498750624,39,37,2000,0
+cm,R1,R1 matched-random flip rate,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.8412499999999999,0.7347570676274944,0.9275098684210525,0.0009995002498750624,40,38,2000,0
+cm,R1,R1 matched-random flip rate,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.8148101265822786,0.7524351265822785,0.8745572355055475,0.0009995002498750624,79,75,2000,0
+cm,R1,R1 matched-random flip rate,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.8144711538461538,0.7522632831039392,0.8729693228454173,0.0009995002498750624,79,75,2000,0
+cm,R1,guided minus R1,TP,"windows originally predicted attack (TP, FP) that have both arms",,0.13538461538461535,0.05076875,0.21243572418572415,0.0029985007496251873,39,37,2000,0
+cm,R1,guided minus R1,FP,"windows originally predicted attack (TP, FP) that have both arms",,0.08375,0.036583522404991506,0.1362565406976744,0.0009995002498750624,40,38,2000,0
+cm,R1,guided minus R1,TP+FP pooled by window,"windows originally predicted attack (TP, FP) that have both arms",,0.10924050632911393,0.06156733664558868,0.1565030844155844,0.0009995002498750624,79,75,2000,0
+cm,R1,guided minus R1,TP+FP equal-weight macro,"windows originally predicted attack (TP, FP) that have both arms",,0.10956730769230769,0.0627315342558864,0.1605683645843375,0.0009995002498750624,79,75,2000,0
+agg vs single,-,aggregate guided minus single-run guided flip rate,TP,windows originally predicted attack with both guided arms,,0.0,0.0,0.0,1.0,40,38,2000,0
+agg vs single,-,aggregate guided minus single-run guided flip rate,FP,windows originally predicted attack with both guided arms,,0.0,0.0,0.0,1.0,40,38,2000,0
+agg vs single,-,aggregate guided minus single-run guided flip rate,TP+FP pooled by window,windows originally predicted attack with both guided arms,,0.0,0.0,0.0,1.0,80,76,2000,0

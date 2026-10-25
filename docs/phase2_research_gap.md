@@ -15,11 +15,12 @@ Baseline: a fresh seeded single run (5,000 samples). Controls: independent aggre
 Perturbations edit the raw 30-call window with the Phase 1 rules (budget b = 3), then re-run the frozen vectorizer, selector and MLP. Metrics: top-5 Jaccard, full-ranking Spearman, sign consistency; direction-aware attack-logit drop,
 probability change and flip rate versus the matched random control. Inference: paired differences, 2,000-replicate cluster bootstrap, Holm correction on three pre-declared comparisons.
 
-**Measured findings** (details and CIs in `phase2_results.md`). Aggregation raised top-5 Jaccard from 0.775 to 0.923 (paired +0.148, CI +0.125 to +0.172) and Spearman from 0.806 to 0.977.
-Guided edits beat matched random edits by about 0.8 logit units for both single-run (+0.821) and aggregated (+0.805) explanations, but aggregated and single-run guided edits did not differ (-0.051, CI -0.150 to +0.054; identical flip rates).
-A single 100k-sample run was more stable than the aggregate (Jaccard 0.994) at about half the cost (1.17 s vs 2.25 s per window; the aggregate cost 19x a single run). Whole design: 9.4 s per window.
+**Measured findings** (details and CIs in `phase2_results.md`). Aggregation raised top-5 Jaccard from 0.775 to 0.923 (paired +0.148, CI +0.125 to +0.172) and the Spearman correlation of absolute-coefficient rankings from 0.806 to 0.977 (these compare pairwise agreement among single runs with agreement between two independent 20-run aggregates, which are different estimands).
+Guided edits beat matched random edits by about 0.8 logit units for both single-run (+0.821) and aggregated (+0.805) explanations, but aggregated and single-run guided edits did not differ (-0.051, CI -0.150 to +0.054; identical flip rates; the guided top-3 set is the same in 83% of windows).
+Among windows predicted as attack, guided edits flipped the decision to normal in about 94% versus about 84% for matched random edits (+0.09).
+A single 100k-sample run had higher top-5 Jaccard than the aggregate (0.994) at about half the cost (1.17 s vs 2.25 s per window; the aggregate cost 19x a single run), although the aggregate had slightly higher ranking-correlation. Whole design: 9.4 s per window.
 
-**Interpretation supported by the data.** Aggregation buys stability, not better perturbation effects, and does not beat spending the same budget on one larger run. **Unverified:** that stability implies faithfulness; behaviour with official LIME, other models or data.
+**Interpretation supported by the data.** Aggregation buys stability, not better perturbation effects, and gave no top-5 advantage over spending the same budget on one larger run (a very small ranking-correlation advantage remained). **Unverified:** that stability implies faithfulness; behaviour with official LIME, other models or data.
 
 **Limitations.** (1) Independent reconstruction, not exact replication of the unavailable dataset. (2) Duplicate traces exist; the global cluster cap mitigates but does not eliminate dependence or train/test content overlap.
 (3) FP has 38 independent clusters (40 windows). (4) The LIME used is a vendored stand-in. (5) Aggregation costs about 20x the explanation computation of a single run (measured above, replicates and controls extra).
