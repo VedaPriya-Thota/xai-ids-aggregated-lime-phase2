@@ -4,6 +4,8 @@
 
 Course project, Explainable AI (DA351), IIIT Dharwad. Team: Thota Veda Priya, Pujari Vanaja Sudha, D. Lakshmi Soujanya, Deepika.
 
+Phase 1 repository (frozen): https://github.com/VedaPriya-Thota/xai-ids-lime-shap-replication
+
 > **One-sentence summary.** LIME is random, so the same alert can get different explanations on different runs; the original paper explains each instance with one run and never measures this. We test whether **averaging 20 LIME runs** makes explanations more stable and makes explanation-guided input edits more effective, and we measure what it costs. Result: **much more stable (top-5 Jaccard 0.775 → 0.923), no demonstrable gain in perturbation effectiveness (−0.051 logit units, 95% CI −0.150 to +0.054), at 19× the cost.**
 
 > **Honesty notes up front.** (1) The authors' dataset and preprocessing were not recoverable, so Phase 1 is an *independent reconstruction*, not an exact reproduction. (2) LIME here is a *vendored stand-in*, not the official package. (3) Everything is evaluated on one frozen model. Section 12 lists every claim we do **not** make.
