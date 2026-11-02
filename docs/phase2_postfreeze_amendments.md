@@ -30,3 +30,10 @@ the protocol and the selected-window manifest. It is kept unedited as a historic
 ## Other post-freeze additions (not hashed in the manifest)
 `docs/phase2_results.md`, `docs/phase2_research_gap.md`, `docs/phase2_README.md`, `requirements-phase2.txt`, `scripts/phase2_audit_checks.py`, `scripts/phase2_supplementary_analysis.py`, `tests/test_phase1_protection.py` (one added test), `tests/test_phase2_audit.py`, an append-only paragraph in `AI_USAGE.md`, and the `append_only_authorized` key in the baseline JSON.
 Four result files (`random_draw_log.csv.gz` and `eligibility_audit_all_windows.csv.gz`, for the pilot and the final run) were present in the delivered ZIP but missing from Git history and from the patch, because Phase 1's `.gitignore` ignores `*.gz`; they are now force-added (the protected `.gitignore` was not edited).
+
+
+## Documentation-only amendment for submission (README)
+* **What.** The Phase 1 `README.md` (one of the 167 hash-protected files) was moved **byte-for-byte** to `docs/PHASE1_README.md` and a new top-level `README.md` describing the whole project (Phase 1 and Phase 2) replaced it. In `results/phase2/protected_hashes_baseline.json` the key `README.md` was renamed to `docs/PHASE1_README.md`; its SHA-256 value is unchanged, so `verify` still checks the original Phase 1 README bytes (167 files, none changed).
+* **Why.** The Phase 1 README states that Phase 2 is not part of the snapshot and gives Phase 1 test counts and pins; submission guidelines require a README that explains execution, dependencies and reproduction for the delivered code.
+* **Effect on experiments.** None: documentation only. No code, protocol, selected-window manifest, model or result file was touched.
+* **Other additions in the same change.** `requirements-phase2-py311.txt` (identical pins except `shap`), `scripts/show_headline_results.py` (read-only summary of saved CSVs), `.gitattributes` (`* -text`, so Git never rewrites line endings and protected-file hashes survive a Windows clone), and one sentence in `docs/phase2_README.md` naming this change.

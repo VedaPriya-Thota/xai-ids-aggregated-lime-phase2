@@ -1,6 +1,6 @@
 # Phase 2: aggregated LIME vs single-run LIME (run instructions)
 
-Everything is additive: Phase 1 code, artifacts and results are never modified. The single authorised edit to a Phase 1 file is an append-only disclosure in `AI_USAGE.md`.
+Everything is additive: Phase 1 code, artifacts and results are never modified. The authorised edits to Phase 1 files are documentation only: an append-only disclosure in `AI_USAGE.md`, and the replacement of the Phase 1 `README.md` by a project-wide README (the original is preserved byte-for-byte as `docs/PHASE1_README.md`, which `verify` still checks; see `docs/phase2_postfreeze_amendments.md`).
 `python -m src.phase2.run_phase2 verify` re-hashes all 167 protected files against `results/phase2/protected_hashes_baseline.json` (for `AI_USAGE.md` the original bytes must still hash to the baseline value).
 
 ## A. What works WITHOUT the raw dataset (cached artifacts only)

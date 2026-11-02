@@ -1,0 +1,14 @@
+# Python 3.11 variant of requirements-phase2.txt: identical pins except shap (0.54.1 needs Python >= 3.12; SHAP is not used by Phase 2).
+# Original header: the exact versions used to produce results/phase2 (Python 3.12.3).
+# The frozen Phase 1 artifacts were created with scikit-learn 1.8.0 (see results/experiments/phase3a_strict_reconstructed_mlp/reproducibility_metadata.json);
+# the older pins in requirements.txt can fail to unpickle them. `lime` is NOT installed: the vendored stand-in in lime/ is used and hash-guarded.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
+PyYAML==6.0.3
+joblib==1.5.3
+pytest==9.1.1
+tabulate==0.10.0
+shap==0.51.0
